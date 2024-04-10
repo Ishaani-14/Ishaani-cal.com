@@ -6,6 +6,23 @@ import SectionSubtitle from "./SectionSubtitle";
 import classes from "../../styles/services.module.css";
 import ServicesItem from "./ServicesItem";
 
+const ChevronPosition = ({ className, style, onClick }) => {
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        top: "95px",
+        right: "95px",
+        position: "absolute",
+      }}
+      onClick={onClick}
+    >
+      <i className="fas fa-chevron-right" />
+    </div>
+  );
+};
+
 const Services = ({ youtubeStats, youtubeVideos }) => {
   const settings = {
     dots: false,
@@ -16,18 +33,15 @@ const Services = ({ youtubeStats, youtubeVideos }) => {
     swipeToSlide: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    nextArrow: <ChevronPosition />,
+    prevArrow: <ChevronPosition />,
   };
   return (
     <section id="youtube-stats">
       <Container>
         <Row>
           <Col lg="3" md="12" sm="12">
-            <Slider
-              {...settings}
-              // style={{ cursor: "pointer", marginBottom: "10px" }}
-              className=" cursor-pointer mb-10 md:mb:0"
-            >
+            <Slider {...settings} className="mb-10 cursor-pointer md:mb:0">
               {youtubeVideos
                 ?.filter((video) => video.id.videoId)
                 ?.map((video) => (
@@ -77,7 +91,7 @@ const Services = ({ youtubeStats, youtubeVideos }) => {
 
           <Col lg="6" md="6" className={`${classes.service__title}`}>
             <SectionSubtitle subtitle="Youtube" />
-            <h3 className="mb-0 mt-4">Popular</h3>
+            <h3 className="mt-4 mb-0">Popular</h3>
             <h3 className="mb-2">Uploads from My Youtube Channel</h3>
             <p>
               I would really appreciate it if you could check it out and maybe
