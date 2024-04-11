@@ -7,6 +7,23 @@ import classes from "../../styles/services.module.css";
 import ServicesItem from "./ServicesItem";
 
 const Services = ({ youtubeStats, youtubeVideos }) => {
+  const ChevronPosition = ({ className, style, onClick }) => {
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          top: "95px",
+          right: "95px",
+          position: "absolute",
+        }}
+        onClick={onClick}
+      >
+        <i className="fas fa-chevron-right" />
+      </div>
+    );
+  };
+
   const settings = {
     dots: false,
     autoplay: true,
@@ -16,7 +33,8 @@ const Services = ({ youtubeStats, youtubeVideos }) => {
     swipeToSlide: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    prevArrow: <ChevronPosition />,
+    nextArrow: <ChevronPosition />,
   };
   return (
     <section id="youtube-stats">
