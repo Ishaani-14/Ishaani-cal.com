@@ -46,11 +46,11 @@ const NAV__LINK = [
 ];
 
 const icons = [
-  <AiFillHome key="home" />,
-  <AiFillShopping key="shopping" />,
-  <FaWhmcs key="whmcs" />,
-  <AiFillEdit key="edit" />,
-  <BiLogInCircle key="login" />,
+  <AiFillHome className="hover:fill-green-400"  key="home" />,
+  <AiFillShopping className="hover:fill-green-400" key="shopping" />,
+  <FaWhmcs className="hover:fill-green-400" key="whmcs" />,
+  <AiFillEdit className="hover:fill-green-400" key="edit" />,
+  <BiLogInCircle className="hover:fill-green-400" key="login" />,
 ];
 
 const Header = () => {
