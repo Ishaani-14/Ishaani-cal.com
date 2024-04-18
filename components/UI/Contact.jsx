@@ -32,21 +32,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className={`${classes.contact}`}>
+    <section id="contact" className={ `${classes.contact}` }>
       <Container>
         <Row className="flex justify-between flex-col md:flex-row ">
           <Col lg="4" md="6">
 
             <h3 className="mt-4 mb-4 text-2xl">Connect with me</h3>
 
-            <ul className={`${classes.contact__info__list}`}>
-              <li className={`${classes.info__item}`}>
+            <ul className={ `${classes.contact__info__list}` }>
+              <li className={ `${classes.info__item}` }>
                 <span>
                   <i className="ri-map-pin-line"></i>
                 </span>
                 <p>Planet Earth 🌍</p>
               </li>
-              <li className={`${classes.info__item}`}>
+              <li className={ `${classes.info__item}` }>
                 <span>
                   <a href="mailto:piyushgarg.dev@gmail.com">
                     <i className="ri-mail-line"></i>
@@ -60,7 +60,7 @@ const Contact = () => {
               </li>
             </ul>
 
-            <div className={`${classes.social__links}`}>
+            <div className={ `${classes.social__links}` }>
               <Link
                 className="hover:text-[#01d293] duration-300"
                 aria-label="Youtube Channel"
@@ -83,7 +83,7 @@ const Contact = () => {
                 href="https://twitter.com/piyushgarg_dev"
                 target="_blank"
               >
-             
+
                 <NewTwitterLogo />
               </Link>
               <Link
@@ -97,7 +97,7 @@ const Contact = () => {
             </div>
           </Col>
           <Col lg="5" md="6">
-            {submitted ? (
+            { submitted ? (
               <div className="flex justify-center items-center text-xl font-bold h-[30vh]">
                 <p>Message Sent!</p>
               </div>
@@ -105,7 +105,7 @@ const Contact = () => {
               <>
                 <div className="mt-4 mb-4 text-2xl"><SectionSubtitle subtitle="Contact me" /></div>
 
-                <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
+                <form className="flex flex-col space-y-4" onSubmit={ handleSubmit }>
                   <input
                     className="text-md border-transparent rounded-lg block w-full p-2.5 bg-[#171f38] placeholder-gray-400 text-white"
                     type="text"
@@ -138,7 +138,7 @@ const Contact = () => {
                   </button>
                 </form>
               </>
-            )}
+            ) }
           </Col>
         </Row>
       </Container>
