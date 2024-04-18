@@ -26,22 +26,22 @@ const NAV__LINK = [
   {
     path: "/",
     display: "Home",
-    openInNewPage:false,
+    openInNewPage: false,
   },
   {
     path: "/#courses",
     display: "Courses",
-    openInNewPage:false,
+    openInNewPage: false,
   },
   {
     path: "/gears",
     display: "My Gears",
-    openInNewPage:false,
+    openInNewPage: false,
   },
   {
     path: "https://blog.piyushgarg.dev",
     display: "Blogs",
-    openInNewPage:true,
+    openInNewPage: true,
   },
 ];
 
@@ -84,11 +84,11 @@ const Header = () => {
   };
 
   return (
-    <header className={`${classes.header}`} ref={headerRef}>
+    <header className={ `${classes.header}` } ref={ headerRef }>
       <Container>
-        <div className={`${classes.nav__wrapper}`}>
-          {/* ======== navigation logo ======== */}
-          <div style={{ cursor: "pointer" }} className={`${classes.logo}`}>
+        <div className={ `${classes.nav__wrapper}` }>
+          {/* ======== navigation logo ======== */ }
+          <div style={ { cursor: "pointer" } } className={ `${classes.logo}` }>
             <Link aria-label="Home Page" href="/">
               <h1>
                 <span>P</span>iyush <span>G</span>arg
@@ -96,45 +96,45 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* ========= nav menu =========== */}
+          {/* ========= nav menu =========== */ }
           <div
-            className={`${classes.navigation}`}
-            ref={menuRef}
-            onClick={toggleMenu}
+            className={ `${classes.navigation}` }
+            ref={ menuRef }
+            onClick={ toggleMenu }
           >
-            <div className={`${classes.nav__menu}`}>
-              {crossMenu && (
+            <div className={ `${classes.nav__menu}` }>
+              { crossMenu && (
                 <div className="border text-white text-3xl absolute top-10 right-10 font-extrabold">
                   <RiCloseLine />
                 </div>
-              )}
-              {NAV__LINK.map((item, index) => (
+              ) }
+              { NAV__LINK.map((item, index) => (
                 <div
-                  key={index}
-                  className={`${classes.mobile__menuDiv} cursor-pointer`}
+                  key={ index }
+                  className={ `${classes.mobile__menuDiv} cursor-pointer` }
                 >
-                  <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage?'_blank':'_self'}`}>
-                    <p className={`${classes.mobile__menu}`}>{icons[index]}</p>
+                  <Link aria-label={ item.display } href={ item.path } target={ `${item.openInNewPage ? '_blank' : '_self'}` }>
+                    <p className={ `${classes.mobile__menu}` }>{ icons[index] }</p>
                   </Link>
 
-                  <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage?'_blank':'_self'}`}>
+                  <Link aria-label={ item.display } href={ item.path } target={ `${item.openInNewPage ? '_blank' : '_self'}` }>
                     <span className=" text-[#808dad] hover:text-green-400">
-                      {item.display}
+                      { item.display }
                     </span>
                   </Link>
                 </div>
-              ))}
+              )) }
 
-              {data && data.user ? (
+              { data && data.user ? (
                 <div
-                  onClick={signOut}
-                  className={`${classes.mobile__menuDiv} cursor-pointer`}
+                  onClick={ signOut }
+                  className={ `${classes.mobile__menuDiv} cursor-pointer` }
                 >
-                  <Link href={"#"}>
-                    <p className={`${classes.mobile__menu}`}>{icons[4]}</p>
+                  <Link href={ "#" }>
+                    <p className={ `${classes.mobile__menu}` }>{ icons[4] }</p>
                   </Link>
 
-                  <Link href={"/#"}>
+                  <Link href={ "/#" }>
                     <span className=" text-[#808dad] hover:text-green-400">
                       Sign Out
                     </span>
@@ -142,24 +142,24 @@ const Header = () => {
                 </div>
               ) : (
                 <div
-                  onClick={signIn}
-                  className={`${classes.mobile__menuDiv} cursor-pointer`}
+                  onClick={ signIn }
+                  className={ `${classes.mobile__menuDiv} cursor-pointer` }
                 >
-                  <Link href={"#"}>
-                    <p className={`${classes.mobile__menu}`}>{icons[4]}</p>
+                  <Link href={ "#" }>
+                    <p className={ `${classes.mobile__menu}` }>{ icons[4] }</p>
                   </Link>
 
-                  <Link href={"#"}>
+                  <Link href={ "#" }>
                     <span className=" text-[#808dad] hover:text-green-400">
                       Login
                     </span>
                   </Link>
                 </div>
-              )}
+              ) }
 
-              <div className={`${classes.nav__right}`}>
+              <div className={ `${classes.nav__right}` }>
                 <div
-                  className={`flex flex-row items-center gap-3 border-l-2 pl-4 border-l-slate-500 `}
+                  className={ `flex flex-row items-center gap-3 border-l-2 pl-4 border-l-slate-500 ` }
                 >
                   <Link
                     aria-label="Youtube Channel"
@@ -167,7 +167,7 @@ const Header = () => {
                     target="_blank"
                     title="Youtube Channel"
                     id="youtube-channel"
-                    className={`cursor-pointer  text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150`}
+                    className={ `cursor-pointer  text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150` }
                     rel="noreferrer"
                   >
                     <RiYoutubeFill />
@@ -178,7 +178,7 @@ const Header = () => {
                     target="_blank"
                     title="Github Account"
                     id="github-account"
-                    className={`cursor-pointer text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150`}
+                    className={ `cursor-pointer text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150` }
                     rel="noreferrer"
                   >
                     <RiGithubFill />
@@ -189,10 +189,10 @@ const Header = () => {
                     target="_blank"
                     title="Twitter Account"
                     id="twitter-account"
-                    className={`cursor-pointer text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150`}
+                    className={ `cursor-pointer text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150` }
                     rel="noreferrer"
                   >
-                    <NewTwitterLogo/>
+                    <NewTwitterLogo />
                   </Link>
 
                   <Link
@@ -200,7 +200,7 @@ const Header = () => {
                     target="_blank"
                     title="LinkedIn Account"
                     id="linkedin-account"
-                    className={`cursor-pointer text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150`}
+                    className={ `cursor-pointer text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150` }
                     rel="noreferrer"
                   >
                     <RiLinkedinFill />
@@ -211,10 +211,10 @@ const Header = () => {
           </div>
 
           <span
-            onClick={() => setCrossMenu(!crossMenu)}
-            className={`${classes.mobile__menu}`}
+            onClick={ () => setCrossMenu(!crossMenu) }
+            className={ `${classes.mobile__menu}` }
           >
-            <i className="ri-menu-line" onClick={toggleMenu}></i>
+            <i className="ri-menu-line" onClick={ toggleMenu }></i>
           </span>
         </div>
       </Container>

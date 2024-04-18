@@ -29,15 +29,16 @@ export default function Home({
   return (
     <Fragment>
       <Head>
-        {/* <!-- Primary Meta Tags --> */}
+        {/* <!-- Primary Meta Tags --> */ }
         <title>Piyush Garg - Dev and Instructor</title>
+
         <meta name="title" content="Piyush Garg - Dev and Instructor" />
         <meta
           name="description"
           content="Hi there! My name is Piyush Garg and I’m a software engineer with over 5 years of experience in the industry. I love all things tech and coding, and on my channel, I share my knowledge and experience with others. Whether you’re a beginner looking to learn the basics or an experienced developer looking to expand your skills, I’ve got something for you."
         />
 
-        {/* <!-- Open Graph / Facebook --> */}
+        {/* <!-- Open Graph / Facebook --> */ }
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.piyushgarg.dev" />
         <meta property="og:title" content="Piyush Garg - Dev and Instructor" />
@@ -50,7 +51,7 @@ export default function Home({
           content="https://www.piyushgarg.dev/images/seo.png"
         />
 
-        {/* <!-- Twitter --> */}
+        {/* <!-- Twitter --> */ }
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.piyushgarg.dev" />
         <meta
@@ -66,19 +67,23 @@ export default function Home({
           content="https://www.piyushgarg.dev/images/seo.png"
         />
       </Head>
+
       <Hero />
-      <Services youtubeVideos={youtubeVideos} youtubeStats={youtubeStats} />
-      <Courses courses={courses} />
-      <Testimonial feedbacks={feedbacks} />
+
+      <Services youtubeVideos={ youtubeVideos } youtubeStats={ youtubeStats } />
+      <Courses courses={ courses } />
+      <Testimonial feedbacks={ feedbacks } />
+
       <Container className="mt-5">
         <SectionSubtitle subtitle="Terminal" />
         <div
           id="terminal-1"
-          style={{ border: "1px solid white", height: "400px" }}
+          style={ { border: "1px solid white", height: "400px" } }
         >
           <Terminal />
         </div>
       </Container>
+      
       <Contact />
     </Fragment>
   );
@@ -145,7 +150,7 @@ export async function getStaticProps(context) {
     const [youtubeStats, youtubeVideos, blogResponse] = await Promise.all([
       getYoutubeStatsForChannelId("UCf9T51_FmMlfhiGpoes0yFA"),
       getYoutubeVideos(),
-      
+
     ]);
 
     return {
@@ -161,5 +166,5 @@ export async function getStaticProps(context) {
       }, // will be passed to the page component as props
       revalidate: 43200, // 12 Hrs
     };
-  } catch (error) {}
+  } catch (error) { }
 }
