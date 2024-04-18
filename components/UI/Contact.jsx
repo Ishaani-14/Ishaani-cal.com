@@ -44,7 +44,7 @@ const Contact = () => {
                 <span>
                   <i className="ri-map-pin-line"></i>
                 </span>
-                <p>Planet Earth 🌍</p>
+                <p className=" hover:text-green-400">Planet Earth <span>🌍</span></p>
               </li>
               <li className={ `${classes.info__item}` }>
                 <span>
