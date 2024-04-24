@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import Link from "next/link";
 import SectionSubtitle from "./SectionSubtitle";
 import { Container, Row, Col, Button } from "reactstrap";
-//import { BsDiscord } from "react-icons/bs";
+//import { FontAwesomeIcon } from "react-icons/bs";
 import Image from "next/image";
 import heroImg from "../../public/images/PiyushGarg.png";
 import classes from "../../styles/hero.module.css";
@@ -44,7 +44,7 @@ const Hero = () => {
                     }}
                     className="block"
                   >
-                    Join Discord Server <FontAwesomeIcon icon={faDiscord} style={{color: "#74C0FC",}} />
+                    Join Discord Server <i class="fa-brands fa-discord" style="color: #74C0FC;"></i>
                   </span>
                 </Link>
               </div>
@@ -108,7 +108,7 @@ const Hero = () => {
                     }}
                     className="block"
                   >
-                    Join Discord Server <FontAwesomeIcon icon={faDiscord} style={{color: "#74C0FC",}} />
+                    Join Discord Server <i class="fa-brands fa-discord" style="color: #74C0FC;"></i>
                   </span>
                 </Link>
               </div>
