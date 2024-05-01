@@ -40,6 +40,7 @@
   margin-right: 10px;
   border-radius: 5px;
   margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolio__keyword:hover {
