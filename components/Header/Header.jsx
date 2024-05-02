@@ -113,15 +113,18 @@ const Header = () => {
                   key={index}
                   className={`${classes.mobile__menuDiv} cursor-pointer`}
                 >
-                  <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage?'_blank':'_self'}`}>
-                    <p className={`${classes.mobile__menu}`}>{icons[index]}</p>
-                  </Link>
+                  <div className="flex items-center group text-[#808dad]">
+                    <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage ? '_blank' : '_self'}`}>
+                      <p className={`${classes.mobile__menu} group-hover:text-green-400`}>{icons[index]}</p>
+                    </Link>
 
-                  <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage?'_blank':'_self'}`}>
-                    <span className=" text-[#808dad] hover:text-green-400">
-                      {item.display}
-                    </span>
-                  </Link>
+                    <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage ? '_blank' : '_self'}`}>
+                      <span className="pl-3 group-hover:text-green-400">
+                        {item.display}
+                      </span>
+                    </Link>
+                  </div>
+
                 </div>
               ))}
 
