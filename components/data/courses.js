@@ -2,7 +2,7 @@ const portfolio = [
   {
     id: "07",
     title: "Full Stack Twitter Clone",
-    subtitle: "Build FullStack twitter clone using latest tech stack",
+    subtitle: "Build FullStack Twitter Clone using latest tech stack",
     img: "/images/twitter-clone.jpg",
     category: "Full Stack",
     keyword: ["Node", "GraphQL", "NextJS", "Primsa", "Postgres"],
