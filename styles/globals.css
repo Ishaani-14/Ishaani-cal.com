@@ -154,17 +154,17 @@ footer {
   z-index: -1;
   content: "";
   display: block;
-  border: 5px solid #2980b9;
+  border: 5px solid #01d293;
 }
 .ribbon span {
   position: absolute;
   display: block;
-  width: 225px;
-  padding: 15px 0;
-  background-color: #3498db;
+  width: 195px;
+  padding: 11px 0;
+  background-color: #01d293;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
-  font: 700 18px/1 "Lato", sans-serif;
+  font: 700 15px/1 "Lato", sans-serif;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   text-align: center;
@@ -181,17 +181,17 @@ footer {
   border-left-color: transparent;
 }
 .ribbon-top-left::before {
-  top: 0;
-  right: 0;
+  top: -4px;
+  right: 31px;
 }
 .ribbon-top-left::after {
-  bottom: 0;
+  bottom: 86px;
   left: 0;
 }
 .ribbon-top-left span {
-  right: -25px;
-  top: 30px;
-  transform: rotate(-45deg);
+  right: 20px;
+  top: 7px;
+  transform: rotate(-28deg);
 }
 
 /* top right*/
