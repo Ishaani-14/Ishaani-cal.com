@@ -123,6 +123,7 @@
 
   .menu__active {
     display: block !important;
+    color:red;
   }
 
   .logo h1 {
