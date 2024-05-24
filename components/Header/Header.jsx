@@ -21,27 +21,26 @@ import {
   AiFillEdit,
 } from "react-icons/ai";
 
-
 const NAV__LINK = [
   {
     path: "/",
     display: "Home",
-    openInNewPage:false,
+    openInNewPage: false,
   },
   {
     path: "/#courses",
     display: "Courses",
-    openInNewPage:false,
+    openInNewPage: false,
   },
   {
     path: "/gears",
     display: "My Gears",
-    openInNewPage:false,
+    openInNewPage: false,
   },
   {
     path: "https://blog.piyushgarg.dev",
     display: "Blogs",
-    openInNewPage:true,
+    openInNewPage: true,
   },
 ];
 
@@ -54,12 +53,15 @@ const icons = [
 ];
 
 const Header = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
   const [crossMenu, setCrossMenu] = useState(false);
   const headerRef = useRef(null);
-
   const menuRef = useRef(null);
-
   const { data } = useSession();
+
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
 
   const headerFunc = () => {
     if (
@@ -74,7 +76,6 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", headerFunc);
-
     return () => window.removeEventListener("scroll", headerFunc);
   }, []);
 
@@ -112,13 +113,28 @@ const Header = () => {
                 <div
                   key={index}
                   className={`${classes.mobile__menuDiv} cursor-pointer`}
+                  onClick={() => {
+                    console.log(index)
+                    handleClick(index)}}
                 >
-                  <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage?'_blank':'_self'}`}>
+                  <Link
+                    aria-label={item.display}
+                    href={item.path}
+                    target={item.openInNewPage ? "_blank" : "_self"}
+                  >
                     <p className={`${classes.mobile__menu}`}>{icons[index]}</p>
                   </Link>
 
-                  <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage?'_blank':'_self'}`}>
-                    <span className=" text-[#808dad] hover:text-green-400">
+                  <Link
+                    aria-label={item.display}
+                    href={item.path}
+                    target={item.openInNewPage ? "_blank" : "_self"}
+                  >
+                    <span
+                      className={`text-[#808dad] hover:text-green-400 ${
+                        activeIndex === index ? 'text-green-400' : ""
+                      }`}
+                    >
                       {item.display}
                     </span>
                   </Link>
@@ -135,7 +151,11 @@ const Header = () => {
                   </Link>
 
                   <Link href={"/#"}>
-                    <span className=" text-[#808dad] hover:text-green-400">
+                    <span
+                      className={`text-[#808dad] hover:text-green-400 ${
+                        activeIndex === NAV__LINK.length ? 'text-green-400' : ""
+                      }`}
+                    >
                       Sign Out
                     </span>
                   </Link>
@@ -150,7 +170,11 @@ const Header = () => {
                   </Link>
 
                   <Link href={"#"}>
-                    <span className=" text-[#808dad] hover:text-green-400">
+                    <span
+                      className={`text-[#808dad] hover:text-green-400 ${
+                        activeIndex === NAV__LINK.length ? 'text-green-400' : ""
+                      }`}
+                    >
                       Login
                     </span>
                   </Link>
@@ -192,7 +216,7 @@ const Header = () => {
                     className={`cursor-pointer text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150`}
                     rel="noreferrer"
                   >
-                    <NewTwitterLogo/>
+                    <NewTwitterLogo />
                   </Link>
 
                   <Link
