@@ -21,27 +21,26 @@ import {
   AiFillEdit,
 } from "react-icons/ai";
 
-
 const NAV__LINK = [
   {
     path: "/",
     display: "Home",
-    openInNewPage:false,
+    openInNewPage: false,
   },
   {
     path: "/#courses",
     display: "Courses",
-    openInNewPage:false,
+    openInNewPage: false,
   },
   {
     path: "/gears",
     display: "My Gears",
-    openInNewPage:false,
+    openInNewPage: false,
   },
   {
     path: "https://blog.piyushgarg.dev",
     display: "Blogs",
-    openInNewPage:true,
+    openInNewPage: true,
   },
 ];
 
@@ -113,12 +112,20 @@ const Header = () => {
                   key={index}
                   className={`${classes.mobile__menuDiv} cursor-pointer`}
                 >
-                  <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage?'_blank':'_self'}`}>
+                  <Link
+                    aria-label={item.display}
+                    href={item.path}
+                    target={`${item.openInNewPage ? "_blank" : "_self"}`}
+                  >
                     <p className={`${classes.mobile__menu}`}>{icons[index]}</p>
                   </Link>
 
-                  <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage?'_blank':'_self'}`}>
-                    <span className=" text-[#808dad] hover:text-green-400">
+                  <Link
+                    aria-label={item.display}
+                    href={item.path}
+                    target={`${item.openInNewPage ? "_blank" : "_self"}`}
+                  >
+                    <span className=" text-[#808dad] hover:border-b pl-1 duration-500 pb-1 hover:font-[800] hover:tracking-[8px] border-green-400 hover:text-green-400">
                       {item.display}
                     </span>
                   </Link>
@@ -150,7 +157,7 @@ const Header = () => {
                   </Link>
 
                   <Link href={"#"}>
-                    <span className=" text-[#808dad] hover:text-green-400">
+                    <span className=" bg-gradient-to-t from-black/10 via-black/60 to-black/100 duration-500 hover:scale-150 p-2 rounded-xl hover:bg-black text-[#8793b1] hover:text-green-400">
                       Login
                     </span>
                   </Link>
@@ -192,7 +199,7 @@ const Header = () => {
                     className={`cursor-pointer text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150`}
                     rel="noreferrer"
                   >
-                    <NewTwitterLogo/>
+                    <NewTwitterLogo />
                   </Link>
 
                   <Link
