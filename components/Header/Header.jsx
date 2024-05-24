@@ -125,7 +125,7 @@ const Header = () => {
                     href={item.path}
                     target={`${item.openInNewPage ? "_blank" : "_self"}`}
                   >
-                    <span className=" text-[#808dad] hover:border-b pl-1 duration-500 pb-1 hover:font-[800] hover:tracking-[8px] border-green-400 hover:text-green-400">
+                    <span className=" text-[#808dad] hover:border-b pl-1 duration-500 pb-1 hover:font-[700] hover:tracking-[8px] border-green-400 hover:text-green-400">
                       {item.display}
                     </span>
                   </Link>
@@ -157,7 +157,7 @@ const Header = () => {
                   </Link>
 
                   <Link href={"#"}>
-                    <span className=" bg-gradient-to-t from-black/10 via-black/60 to-black/100 duration-500 hover:scale-150 p-2 rounded-xl hover:bg-black text-[#8793b1] hover:text-green-400">
+                    <span className=" bg-gradient-to-t from-black/10 via-black/60 to-black/100 duration-500  p-2 rounded-xl hover:bg-black text-[#8793b1] hover:text-green-400">
                       Login
                     </span>
                   </Link>
