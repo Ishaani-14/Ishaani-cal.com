@@ -3,6 +3,9 @@
   height: 94px;
   line-height: 80px;
   background-color: #0e1630;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .nav__wrapper {
@@ -106,6 +109,7 @@
     height: 100%;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
   }
 
   .nav__right {
@@ -114,10 +118,12 @@
 
   .mobile__menu {
     display: block !important;
+    margin-left: 50px;
   }
 
   .menu__active {
     display: block !important;
+    color:red;
   }
 
   .logo h1 {
