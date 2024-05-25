@@ -7,7 +7,7 @@ import Form from "./Form";
 import axios from "axios";
 import { useState } from "react";
 import NewTwitterLogo from "./NewTwitterlogo";
-import { RiYoutubeFill, RiGithubFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
+import { RiYoutubeFill, FaGithub , RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = async (event) => {
@@ -75,7 +75,7 @@ const Contact = () => {
                 href="https://github.com/piyushgarg-dev"
                 target="_blank"
               >
-                <RiGithubFill />
+                <FaGithub  />
               </Link>
               <Link
                 className="hover:text-[#01d293] duration-300"

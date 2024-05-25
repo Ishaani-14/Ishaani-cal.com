@@ -9,7 +9,7 @@ import NewTwitterLogo from "../UI/NewTwitterlogo";
 import {
   RiCloseLine,
   RiYoutubeFill,
-  RiGithubFill,
+  FaGithub ,
   RiTwitterFill,
   RiLinkedinFill,
 } from "react-icons/ri";
@@ -181,7 +181,7 @@ const Header = () => {
                     className={`cursor-pointer text-[#ffffff] hover:text-[--site-theme-color] transform ease-in-out hover:-translate-y+1 hover:scale-150`}
                     rel="noreferrer"
                   >
-                    <RiGithubFill />
+                    <FaGithub  />
                   </Link>
 
                   <Link
