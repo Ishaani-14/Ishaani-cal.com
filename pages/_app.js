@@ -31,6 +31,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "fovtfnoy8f");`}
             </Script>
+            
           </>
         )}
         <Component {...pageProps} />;
