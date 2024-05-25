@@ -18,6 +18,7 @@ import courses from "../components/data/courses";
 
 import { Container } from "reactstrap";
 import SectionSubtitle from "../components/UI/SectionSubtitle";
+import Map from "../components/Map";
 
 export default function Home({
   youtubeStats,
@@ -65,6 +66,12 @@ export default function Home({
           property="twitter:image"
           content="https://www.piyushgarg.dev/images/seo.png"
         />
+
+        <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css"
+          rel="stylesheet"
+        />
       </Head>
       <Hero />
       <Services youtubeVideos={youtubeVideos} youtubeStats={youtubeStats} />
@@ -77,9 +84,11 @@ export default function Home({
           style={{ border: "1px solid white", height: "400px" }}
         >
           <Terminal />
+          <></>
         </div>
       </Container>
       <Contact />
+      {/* <Map /> */}
     </Fragment>
   );
 }
@@ -145,7 +154,6 @@ export async function getStaticProps(context) {
     const [youtubeStats, youtubeVideos, blogResponse] = await Promise.all([
       getYoutubeStatsForChannelId("UCf9T51_FmMlfhiGpoes0yFA"),
       getYoutubeVideos(),
-      
     ]);
 
     return {

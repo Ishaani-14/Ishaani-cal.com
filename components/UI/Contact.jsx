@@ -8,6 +8,7 @@ import axios from "axios";
 import { useState } from "react";
 import NewTwitterLogo from "./NewTwitterlogo";
 import { RiYoutubeFill, RiGithubFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
+import Map from '../Map.js';
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = async (event) => {
@@ -60,6 +61,7 @@ const Contact = () => {
               </li>
             </ul>
 
+
             <div className={`${classes.social__links}`}>
               <Link
                 className="hover:text-[#01d293] duration-300"
@@ -95,6 +97,7 @@ const Contact = () => {
                 <RiLinkedinFill />
               </Link>
             </div>
+              <Map/>
           </Col>
           <Col lg="5" md="6">
             {submitted ? (
@@ -137,6 +140,9 @@ const Contact = () => {
                     Send Message
                   </button>
                 </form>
+
+                {/* <div id='map' style='width: 400px; height: 300px;'></div> */}
+              
               </>
             )}
           </Col>
