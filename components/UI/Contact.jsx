@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Link from "next/link";
 import SectionSubtitle from "./SectionSubtitle";
 import classes from "../../styles/contact.module.css";
-import Form from "./Form";
 import axios from "axios";
-import { useState } from "react";
 import NewTwitterLogo from "./NewTwitterlogo";
 import { RiYoutubeFill, RiGithubFill, RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
+
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+
+  // Create refs for form fields
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      message: event.target.message.value,
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      message: messageRef.current.value,
     };
     console.log(data);
     try {
       const response = await axios.post("/api/contact", data);
       if (response.status === 200) {
         setSubmitted(true);
+        // Clear the form fields
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        messageRef.current.value = "";
         console.log("Form submitted");
       } else {
         console.log("Failed");
@@ -34,11 +43,9 @@ const Contact = () => {
   return (
     <section id="contact" className={`${classes.contact}`}>
       <Container>
-        <Row className="flex justify-between flex-col md:flex-row ">
+        <Row className="flex justify-between flex-col md:flex-row">
           <Col lg="4" md="6">
-
             <h3 className="mt-4 mb-4 text-2xl">Connect with me</h3>
-
             <ul className={`${classes.contact__info__list}`}>
               <li className={`${classes.info__item}`}>
                 <span>
@@ -59,7 +66,6 @@ const Contact = () => {
                 </p>
               </li>
             </ul>
-
             <div className={`${classes.social__links}`}>
               <Link
                 className="hover:text-[#01d293] duration-300"
@@ -83,12 +89,11 @@ const Contact = () => {
                 href="https://twitter.com/piyushgarg_dev"
                 target="_blank"
               >
-             
                 <NewTwitterLogo />
               </Link>
               <Link
                 className="hover:text-[#01d293] duration-300"
-                aria-label="LinedIn Account"
+                aria-label="LinkedIn Account"
                 href="https://www.linkedin.com/in/piyushgarg195/"
                 target="_blank"
               >
@@ -103,13 +108,15 @@ const Contact = () => {
               </div>
             ) : (
               <>
-                <div className="mt-4 mb-4 text-2xl"><SectionSubtitle subtitle="Contact me" /></div>
-
+                <div className="mt-4 mb-4 text-2xl">
+                  <SectionSubtitle subtitle="Contact me" />
+                </div>
                 <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
                   <input
                     className="text-md border-transparent rounded-lg block w-full p-2.5 bg-[#171f38] placeholder-gray-400 text-white"
                     type="text"
                     name="name"
+                    ref={nameRef}
                     placeholder="Your Full Name"
                     required
                     autoComplete="off"
@@ -118,6 +125,7 @@ const Contact = () => {
                     className="text-md border-transparent rounded-lg block w-full p-2.5 bg-[#171f38] placeholder-gray-400 text-white"
                     type="email"
                     name="email"
+                    ref={emailRef}
                     placeholder="Your Email"
                     required
                     autoComplete="off"
@@ -125,6 +133,7 @@ const Contact = () => {
                   <textarea
                     className="text-md border-transparent rounded-lg block w-full p-2.5 bg-[#171f38] placeholder-gray-400 text-white"
                     name="message"
+                    ref={messageRef}
                     placeholder="Your Message"
                     required
                     rows="4"
@@ -142,46 +151,6 @@ const Contact = () => {
           </Col>
         </Row>
       </Container>
-      {/* <Container className=" w-80">
-        {submitted ? (
-          <div className="flex justify-center items-center text-xl font-bold h-[30vh]">
-            <p>Message Sent!</p>
-          </div>
-        ) : (
-          <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
-            <input
-              className="border border-gray-300 bg-transparent px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:rgba(77, 181, 255, 0.4) text-white"
-              type="text"
-              name="name"
-              placeholder="Your Full Name"
-              required
-              autoComplete="off"
-            />
-            <input
-              className="border border-gray-300 bg-transparent px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:[rgba(77, 181, 255, 0.4)] text-white"
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-              autoComplete="off"
-            />
-            <textarea
-              className="border border-gray-300 bg-transparent px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:rgba(77, 181, 255, 0.4) text-white"
-              name="message"
-              placeholder="Your Message"
-              required
-              rows="4"
-              autoComplete="off"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-            >
-              Send Message
-            </button>
-          </form>
-        )}
-      </Container> */}
     </section>
   );
 };
