@@ -10,6 +10,7 @@ const getXmlUrlWrapper = (path) => `<url>
 async function getXMLUrlsForStaticPaths(host) {
   const staticPagesPaths = ["/index", "/gears"];
   return staticPagesPaths
+  
     .map((page) => {
       const path = page
         .replace("pages", "")
