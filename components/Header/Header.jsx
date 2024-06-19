@@ -20,6 +20,7 @@ import {
   AiFillExclamationCircle,
   AiFillEdit,
 } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 
 const NAV__LINK = [
@@ -55,6 +56,8 @@ const icons = [
 
 const Header = () => {
   const [crossMenu, setCrossMenu] = useState(false);
+  const router = useRouter();
+
   const headerRef = useRef(null);
 
   const menuRef = useRef(null);
@@ -118,7 +121,7 @@ const Header = () => {
                   </Link>
 
                   <Link aria-label={item.display} href={item.path} target={`${item.openInNewPage?'_blank':'_self'}`}>
-                    <span className=" text-[#808dad] hover:text-green-400">
+                    <span className={`${router.asPath === item.path ? 'text-green-400' : 'text-[#808dad]'} hover:text-green-400`}>
                       {item.display}
                     </span>
                   </Link>
