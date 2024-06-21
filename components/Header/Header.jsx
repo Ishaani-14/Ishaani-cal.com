@@ -85,7 +85,7 @@ const Header = () => {
 
   return (
     <header className={`${classes.header}`} ref={headerRef}>
-      <Container>
+      <Container className="md:fixed md:mx-[95px]">
         <div className={`${classes.nav__wrapper}`}>
           {/* ======== navigation logo ======== */}
           <div style={{ cursor: "pointer" }} className={`${classes.logo}`}>
