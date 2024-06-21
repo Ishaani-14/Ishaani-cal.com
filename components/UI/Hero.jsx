@@ -33,8 +33,7 @@ const Hero = () => {
                   target="_blank"
                   href="https://discord.gg/kRSRxBQ6xf"
                   className="relative text-sm sm:text-md md:text-lg text-center items-center justify-center px-8 py-4  font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                  role="button"
-                >
+                  role="button">
                   <span
                     style={{
                       display: "flex",
@@ -42,8 +41,7 @@ const Hero = () => {
                       alignItems: "center",
                       gap: "10px",
                     }}
-                    className="block"
-                  >
+                    className="block">
                     Join Discord Server <BsDiscord />
                   </span>
                 </Link>
@@ -52,7 +50,7 @@ const Hero = () => {
           </Col>
           <Col lg="6" md="6">
             <div className={`${classes.hero__img} text-end`}>
-              <Image alt="Piyush Garg" src={heroImg} width="450" height="450" />
+              <Image alt="Piyush Garg" src={heroImg} width="400" height="400" />
             </div>
           </Col>
         </Row>
@@ -97,8 +95,7 @@ const Hero = () => {
                   target="_blank"
                   href="https://discord.gg/kRSRxBQ6xf"
                   className="relative w-full text-sm sm:text-md md:text-lg text-center items-center justify-center px-8 py-4  font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-                  role="button"
-                >
+                  role="button">
                   <span
                     style={{
                       display: "flex",
@@ -106,8 +103,7 @@ const Hero = () => {
                       alignItems: "center",
                       gap: "10px",
                     }}
-                    className="block"
-                  >
+                    className="block">
                     Join Discord Server <BsDiscord />
                   </span>
                 </Link>
