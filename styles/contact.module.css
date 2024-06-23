@@ -7,6 +7,10 @@
   padding-left: 0;
   margin-top: 40px;
 }
+.textarea__with__min__height {
+  min-height: 100px; /* Adjust the min-height value as needed */
+}
+
 
 .info__item {
   display: flex;
