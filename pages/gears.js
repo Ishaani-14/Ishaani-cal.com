@@ -11,7 +11,12 @@ export default function Gears() {
         <title>Piyush Garg - Gears</title>
       </Head>
       <Container className="mt-5">
-        <SectionSubtitle subtitle="Gears" />
+        <Row>
+          <Col lg="6" md="6" className="mb-5">
+            <SectionSubtitle subtitle="Gears" />
+            <h4 className="mt-4 text-2xl">Checkout The Gears That I Use</h4>
+          </Col>
+        </Row>
         <Row>
           {gears.map((item) => (
             <Col
