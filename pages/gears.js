@@ -11,7 +11,10 @@ export default function Gears() {
         <title>Piyush Garg - Gears</title>
       </Head>
       <Container className="mt-5">
-        <SectionSubtitle subtitle="Gears" />
+       <div className="pb-8">
+          <SectionSubtitle subtitle="Gears"/>
+       </div>
+      
         <Row>
           {gears.map((item) => (
             <Col
