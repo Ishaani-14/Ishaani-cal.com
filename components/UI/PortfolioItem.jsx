@@ -48,7 +48,7 @@ const PortfolioItem = (props) => {
                 flexDirection: "row",
                 flexWrap: "wrap",
               }}
-              className="pt-[px]"
+              className=""
               >
 
               {keyword.map((item, index) => (
