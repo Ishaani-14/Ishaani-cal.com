@@ -36,9 +36,9 @@ const PortfolioItem = (props) => {
             </div>
 
             <h3 style={{ background: "transparent" }}>{title}</h3>
-            <p style={{ background: "transparent", }}>{subtitle}</p>
+            <p style={{ background: "transparent", }} className="lg:py-[14px]">{subtitle}</p>
             
-            <div className=" w-[100%] mt-5 lg:mt-0"> </div>
+            <div className=" w-[100%] p-4 lg:mt-0"> </div>
             <div
               style={{
                 position: "absolute",
@@ -47,7 +47,9 @@ const PortfolioItem = (props) => {
                 display: "flex",
                 flexDirection: "row",
                 flexWrap: "wrap",
-              }}>
+              }}
+              className="pt-[px]"
+              >
 
               {keyword.map((item, index) => (
                 <span
