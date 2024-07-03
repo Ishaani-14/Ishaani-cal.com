@@ -14,7 +14,7 @@ const portfolio = [
     subtitle: "Learn Next.js with App router, Server Components and much more.",
     img: "/images/next-14.webp",
     category: "Full Stack",
-    keyword: ["NextJS", "Server-Components", "Server-Actions"],
+    keyword: ["Server-Components", "NextJS", "Server-Actions"],
     liveUrl: "https://learn.piyushgarg.dev/learn/nextjs-14",
   },
   {
