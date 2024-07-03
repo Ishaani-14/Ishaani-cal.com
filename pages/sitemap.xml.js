@@ -1,11 +1,18 @@
 import projects from "../components/data/projects";
 
-const getXmlUrlWrapper = (path) => `<url>
-<loc>https://www.piyushgarg.dev/${
-  path.startsWith("/") ? path.slice(1) : path
-}</loc>
+// const getXmlUrlWrapper = (path) => `<url>
+// <loc>https://www.piyushgarg.dev/${
+//   path.startsWith("/") ? path.slice(1) : path
+// }</loc>
+// <changefreq>weekly</changefreq>
+// </url>`;
+const getXmlUrlWrapper = (path) => {
+  const formattedPath = path.startsWith("/") ? path.slice(1) : path;
+  return `<url>
+<loc>https://www.piyushgarg.dev/</loc>
 <changefreq>weekly</changefreq>
 </url>`;
+};
 
 async function getXMLUrlsForStaticPaths(host) {
   const staticPagesPaths = ["/index", "/gears"];
