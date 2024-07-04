@@ -38,7 +38,7 @@
 }
 
 .social__links :hover {
-  color: var(--site-theme-color);
+  color: var(red);
 }
 
 @media only screen and (max-width: 768px) {
