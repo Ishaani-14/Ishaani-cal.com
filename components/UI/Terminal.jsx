@@ -9,7 +9,7 @@ const Terminal = () => {
 
   const terminalCommands = React.useMemo(() => {
     return {
-      whoami: {
+      "who-am-i": {
         help: "Tells you who are you",
         action: isLoggedIn ? (
           `${data.user.name} <${data.user.email}>`
