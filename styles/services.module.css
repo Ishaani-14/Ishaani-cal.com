@@ -14,3 +14,10 @@
     font-size: 1.3rem;
   }
 }
+button.scaleUpButton {
+  transition: transform 0.3s ease-in-out !important;
+}
+
+button.scaleUpButton:hover {
+  transform: scale(1.1) !important;
+}
