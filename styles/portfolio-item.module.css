@@ -5,7 +5,10 @@
   border-radius: 10px;
   margin-bottom: 8px;
   min-height: 100%;
-  position: relative;
+  position: relative;  display: flex;
+  flex-direction: column;
+  height: fit-content; /* Set a fixed height */
+
 }
 
 .portfolio__item div {
@@ -61,7 +64,22 @@
   margin-left: 0;
   display: block;
 }
+.portfolio__link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.portfolio__content {
+  flex-grow: 1;
+  overflow-y: auto;
+} 
 
+.portfolio__keywords {
+  display: flex; 
+  flex-wrap: wrap;
+  align-items: center;
+}
 
 @media only screen and (max-width: 940px) {
   .portfolio__keyword {
