@@ -18,48 +18,35 @@ const PortfolioItem = (props) => {
     <div className={`${classes.portfolio__item}`}>
       <a
         target='_blank'
-        style={{ textDecoration: 'none' }}
+        style={{ textDecoration: 'none'}}
         href={liveUrl}
-        rel='noreferrer'
+        rel='noreferrer'  
+        className={classes.portfolio__link}
       >
-        <>
           {ribbonText && (
             <div style={{ zIndex: 99 }} className='ribbon ribbon-top-left'>
               <span>{ribbonText}</span>
             </div>
           )}
 
-          <div className='bg-transparent'>
             <div className={`${classes.portfolio__img}`}>
-              <Image alt={title} src={img} width={380} height={1} style={{maxHeight: "380px", overflow:"auto"}}/>
+              <Image alt={title} src={img} width={380} height={1} style={{maxHeight: "380px", overflow:"auto", objectFit:"cover"}}/>
 
             </div>
-
-            <h3 style={{ background: "transparent" }}>{title}</h3>
-            <p style={{ background: "transparent", }}>{subtitle}</p>
-            
-            <div className=" w-[100%] mt-5 lg:mt-0"> </div>
-            <div
-              style={{
-                position: "absolute",
-                background: "transparent",
-                bottom: "20px",
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-              }}>
-
-              {keyword.map((item, index) => (
-                <span
-                  className={`${classes.portfolio__keyword} my-1`}
-                  key={index}
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-        </>
+            <div className={classes.portfolio__content}>
+          <h3>{title}</h3>
+          <p>{subtitle}</p>
+        </div>
+        <div className={classes.portfolio__keywords}>
+          {keyword.map((item, index) => (
+            <span
+              className={`${classes.portfolio__keyword} my-1`}
+              key={index}
+            >
+              {item}
+            </span>
+          ))}
+        </div>
       </a>
     </div>
   );
