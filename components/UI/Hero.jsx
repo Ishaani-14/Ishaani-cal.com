@@ -44,7 +44,10 @@ const Hero = () => {
                     }}
                     className="block"
                   >
-                    Join Discord Server <BsDiscord />
+                    Join Discord Server style={{
+                    transform: "translateY(0.5px)",
+                    fontSize: "24px", /* Adjust the size as needed */
+                  }}<BsDiscord />
                   </span>
                 </Link>
               </div>
@@ -108,7 +111,10 @@ const Hero = () => {
                     }}
                     className="block"
                   >
-                    Join Discord Server <BsDiscord />
+                    Join Discord Server style={{
+                    transform: "translateY(0.5px)",
+                    fontSize: "24px", /* Adjust the size as needed */
+                  }}<BsDiscord />
                   </span>
                 </Link>
               </div>
