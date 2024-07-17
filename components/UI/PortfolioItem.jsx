@@ -43,10 +43,7 @@ const PortfolioItem = (props) => {
               style={{
                 position: "absolute",
                 background: "transparent",
-                bottom: "20px",
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
+                bottom: "20px"
               }}>
 
               {keyword.map((item, index) => (
