@@ -20,10 +20,10 @@ const Hero = () => {
               <h2 className="mt-3 mb-3">I&apos;m Piyush Garg</h2>
               <h5 className="mb-4">Fullstack Developer & Instructor</h5>
               <p id="about-me">
-                Hi there! My name is Piyush Garg and I&rsquo;m a software
-                engineer with over 5 years of experience in the industry. I love
-                all things tech and coding, and on my channel, I share my
-                knowledge and experience with others.
+                As a seasoned software engineer with over five years of experience,
+                I have a deep passion for technology and coding. On my channel,
+                I am committed to sharing my knowledge and expertise, 
+                guiding others through the ever-evolving landscape of the tech industry.
               </p>
             </div>
             <div className="mt-5 flex place-content-center md:block">
