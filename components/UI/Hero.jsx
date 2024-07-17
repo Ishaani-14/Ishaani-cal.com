@@ -40,7 +40,7 @@ const Hero = () => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      gap: "10px",
+                      gap: "6px",
                     }}
                     className="block"
                   >
@@ -104,7 +104,7 @@ const Hero = () => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      gap: "10px",
+                      gap: "6px",
                     }}
                     className="block"
                   >
