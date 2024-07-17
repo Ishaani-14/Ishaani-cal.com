@@ -35,7 +35,15 @@ const Hero = () => {
                   className="relative text-sm sm:text-md md:text-lg text-center items-center justify-center px-8 py-4  font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                   role="button"
                 >
-                  <span className="flex justify-center items-center gap-2">
+                  <span
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "6px",
+                    }}
+                    className="block"
+                  >
                     Join Discord Server <BsDiscord />
                   </span>
                 </Link>
@@ -91,7 +99,15 @@ const Hero = () => {
                   className="relative w-full text-sm sm:text-md md:text-lg text-center items-center justify-center px-8 py-4  font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                   role="button"
                 >
-                  <span className="flex justify-center items-center gap-2">
+                  <span
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: "6px",
+                    }}
+                    className="block"
+                  >
                     Join Discord Server <BsDiscord />
                   </span>
                 </Link>
