@@ -19,7 +19,7 @@ const Courses = ({ courses = [] }) => {
         <Row>
           {courses.map((item) => (
             <Col
-              style={{ margin: "10px 0px" }}
+              style={{ margin: "10px 0px",minHeight: "350px" }}
               key={item.id}
               lg="4"
               md="4"
