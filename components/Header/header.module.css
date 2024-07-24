@@ -87,6 +87,7 @@
 /* ========== make it responsive ========= */
 
 @media only screen and (max-width: 992px) {
+  
   .navigation {
     position: fixed;
     top: 0;
@@ -109,9 +110,9 @@
   }
 
   .nav__right {
-    display: none;
+    display: none !important;
   }
-
+ 
   .mobile__menu {
     display: block !important;
   }
@@ -131,6 +132,11 @@
   }
 }
 
+@media (min-width: 992px) {
+  .cross___symbol{
+    display: none;
+     }
+}
 @media only screen and (max-width: 768px) {
   .header {
     height: 60px;
